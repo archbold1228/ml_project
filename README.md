@@ -28,7 +28,7 @@ The project consists of the following Python scripts:
 - **CalculiX** (inside Docker, handled automatically)
 
 **Important Note:**  
-Ensure you have Docker installed and running on your system to execute the CalculiX simulations.
+Ensure you have Docker installed and running on your system to execute the CalculiX simulations or alternatively install CalculiX in your local machine.
 
 # Project Structure
 
@@ -77,7 +77,7 @@ Run the `py04_train_ml_model.py` script:
 
 `python py04_train_ml_model.py`
 
-This script trains a regression model to predict the displacements based on input parameters (E-Modul, Poisson's ratio, Load). The model can then be used to make predictions on new input sets without rerunning simulations.
+This script trains a ML model with pytorch to predict the displacements based on input parameters (E-Modul, Load). The model can then be used to make predictions on new input sets without rerunning simulations.
 
 # File Descriptions
 
@@ -123,9 +123,12 @@ This script trains a machine learning model (using **PyTorch**) to predict displ
 # Results
 
 - The trained machine learning model is saved in the `model.pth` file.
-- The best hyperparameters used during training are stored in a JSON file `best_10_hyperparams.json`.
-- Additionally, a CSV file with the predictions and error percentages is generated.
-
+- The best hyperparameters used during training are stored in a JSON file `best_hyperparams.json`.
+- The error percentages of each training sample compared to the ML-prediction is calculated. The average error is around 2.0%.
+- The model will be improved using Graph Neural Networks. In that manner the connectivity between the nodes of the beam will be taken into account and more precise results are expected.
+- In addition to improving accuracy, the connectivity aspect enables predictions not only for the middle point of the beam but for all points across the model. This makes it possible to render a complete visualization of the ML-prediction.
+- Taking all these conclutions a step further, this new approach will enable the ML-solver to not only predict scalar values but also provide visualizations of displacement, load, or strength distributions across any component modeled using FEM (Finite Element Method).
+ 
 # Contribution
 
 If you would like to contribute to this project, feel free to fork the repository, create a feature branch, and submit a pull request.

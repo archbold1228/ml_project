@@ -1,30 +1,38 @@
-ML-Driven Simulation Workflow with CalculiX and Python
-This project automates the generation, execution, and collection of simulation results using CalculiX input decks, followed by training a machine learning model to predict simulation results.
+# ML-Driven Simulation Workflow with CalculiX and Python
 
-Project Overview
+This project automates the generation, execution, and collection of simulation results using **CalculiX** input decks, followed by training a machine learning model to predict simulation results.
+
+## Project Overview
+
 This repository includes a full pipeline to:
 
-Generate input decks for CalculiX simulations.
-Run the generated input decks using a Docker container.
-Collect and process the results of the simulations.
-Train a machine learning model on the results to predict simulation outcomes.
+1. Generate input decks for **CalculiX** simulations.
+2. Run the generated input decks using a Docker container.
+3. Collect and process the results of the simulations.
+4. Train a machine learning model on the results to predict simulation outcomes.
+
 The project consists of the following Python scripts:
 
-py01_generator_inputdeck.py: Generates multiple input decks for simulations.
-py02_run_inputdecks.py: Runs the generated input decks through CalculiX using Docker.
-py03_collect_inputdecks_results.py: Collects and processes the results from the simulations.
-py04_train_ml_model.py: Trains a machine learning model using the collected data from the simulations.
-Prerequisites
-Software Requirements:
-Python 3.8+
-Docker (for running the CalculiX simulations)
-CalculiX (inside Docker, handled automatically)
-Python Dependencies:
-Install the required Python libraries via pip:
+- `py01_generator_inputdeck.py`: Generates multiple input decks for simulations.
+- `py02_run_inputdecks.py`: Runs the generated input decks through **CalculiX** using Docker.
+- `py03_collect_inputdecks_results.py`: Collects and processes the results from the simulations.
+- `py04_train_ml_model.py`: Trains a machine learning model using the collected data from the simulations.
 
-bash
-Code kopieren
+---
+
+## Prerequisites
+
+### Software Requirements:
+- **Python 3.8+**
+- **Docker** (for running the **CalculiX** simulations)
+- **CalculiX** (inside Docker, handled automatically)
+
+### Python Dependencies:
+Install the required Python libraries via `pip`:
+
+```bash
 pip install -r requirements.txt
+
 Ensure you have Docker installed and running on your system to execute the CalculiX simulations.
 
 Project Structure

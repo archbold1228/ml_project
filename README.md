@@ -20,35 +20,30 @@ The project consists of the following Python scripts:
 
 ---
 
-## Prerequisites
-
 ### Software Requirements:
 - **Python 3.8+**
+- **Pytorch**
 - **Docker** (for running the **CalculiX** simulations)
 - **CalculiX** (inside Docker, handled automatically)
 
-### Python Dependencies:
-Install the required Python libraries via `pip`:
+### Important note:
+Ensure you have Docker installed and running on your system to execute the CalculiX simulations or just install CalculiX in your computer.
 
-```bash
-pip install -r requirements.txt
-
-Ensure you have Docker installed and running on your system to execute the CalculiX simulations.
-
-Project Structure
+### Project Structure:
 py01_generator_inputdeck.py: Generates random input decks for CalculiX.
 py02_run_inputdecks.py: Executes the generated input decks via Docker.
 py03_collect_inputdecks_results.py: Gathers the results from the completed simulations.
 py04_train_ml_model.py: Trains a machine learning model on the simulation data to make predictions on new inputs.
-Usage Guide
+
+### Usage Guide
 1. Generate Input Decks
 The first step is to generate input decks for CalculiX simulations.
 
 Run the py01_generator_inputdeck.py script:
 
-bash
+```bash
 Code kopieren
-python py01_generator_inputdeck.py
+python py01_generator_inputdeck.py```
 This script generates multiple .inp files based on random parameters like E-Modul, Poisson's ratio, and Load.
 
 2. Run Input Decks

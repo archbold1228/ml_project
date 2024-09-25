@@ -126,7 +126,7 @@ This script trains a machine learning model (using **PyTorch**) to predict displ
 - The best hyperparameters used during training are stored in a JSON file `best_hyperparams.json`.
 - The error percentages of each training sample compared to the ML-prediction is calculated. The average error is around 2.0%.
 - The model will be improved using Graph Neural Networks. In that manner the connectivity between the nodes of the beam will be taken into account and more precise results are expected.
-- In addition to improving accuracy, the connectivity aspect enables predictions not only for the middle point of the beam but for all points across the model. This makes it possible to render a complete visualization of the ML-prediction.
+- In addition to improving accuracy, the connectivity aspect enables predictions not only for the middle node of the beam but for all nodes across the model. This makes it possible to render a complete visualization of the ML-prediction.
 - Taking all these conclutions a step further, this new approach will enable the ML-solver to not only predict scalar values but also provide visualizations of displacement, load, or strength distributions across any component modeled using FEM (Finite Element Method).
 
 # Contact

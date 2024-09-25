@@ -1,6 +1,6 @@
 # ML-Driven Simulation Workflow with CalculiX and Python
 
-This project automates the generation, execution, and collection of simulation results using **CalculiX** input decks, followed by training a machine learning model to predict simulation results.
+This project automates the generation, execution, and collection of simulation results using **CalculiX** input decks (for simplicity the FEM-Model is a "clamped-clamped" beam), followed by training a machine learning model to predict simulation results.
 
 ## Project Overview
 
